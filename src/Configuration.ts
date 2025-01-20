@@ -48,7 +48,7 @@ const EnvironmentConfigurations: {[key:string]: Configuration} = {
     buildEnvironment: Statics.gnBuildEnvironment,
     deploymentEnvironment: Statics.gnVerzoekserviceWerkEnInkomenAccpEnvironment,
   },
-  production: {
+  main: {
     branch: 'main',
     buildEnvironment: Statics.gnBuildEnvironment,
     deploymentEnvironment: Statics.gnVerzoekserviceWerkEnInkomenProdEnvironment,
