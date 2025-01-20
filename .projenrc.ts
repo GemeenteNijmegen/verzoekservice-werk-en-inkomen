@@ -2,12 +2,29 @@ import { GemeenteNijmegenCdkApp } from '@gemeentenijmegen/projen-project-type';
 const project = new GemeenteNijmegenCdkApp({
   cdkVersion: '2.1.0',
   defaultReleaseBranch: 'main',
-  devDeps: ['@gemeentenijmegen/projen-project-type'],
+  // depsUpgradeOptions: {
+  //   workflowOptions: {
+  //     branches: ['acceptance'],
+  //     labels: ['auto-merge'],
+  //   },
+  // },
+  deps: [
+    '@gemeentenijmegen/utils',
+  ],
+  devDeps: [
+    '@gemeentenijmegen/projen-project-type',
+    'dotenv',
+  ],
   name: 'verzoekservice-werk-en-inkomen',
   projenrcTs: true,
-
-  // deps: [],                /* Runtime dependencies of this module. */
-  // description: undefined,  /* The description is just a string that helps people understand the purpose of the package. */
-  // packageName: undefined,  /* The "name" in package.json. */
+  gitignore: [
+    '**/output', // will ignore all output folders and everything in them
+  ],
+  jestOptions: {
+    jestConfig: {
+      setupFiles: ['dotenv/config'],
+      roots: ['test', 'src'],
+    },
+  },
 });
 project.synth();

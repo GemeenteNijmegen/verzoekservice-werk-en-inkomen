@@ -38,6 +38,10 @@
       "type": "build"
     },
     {
+      "name": "dotenv",
+      "type": "build"
+    },
+    {
       "name": "esbuild",
       "type": "build"
     },
@@ -78,6 +82,10 @@
     {
       "name": "typescript",
       "type": "build"
+    },
+    {
+      "name": "@gemeentenijmegen/utils",
+      "type": "runtime"
     },
     {
       "name": "aws-cdk-lib",
