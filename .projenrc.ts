@@ -8,13 +8,8 @@ const project = new GemeenteNijmegenCdkApp({
   //     labels: ['auto-merge'],
   //   },
   // },
-  deps: [
-    '@gemeentenijmegen/utils',
-  ],
-  devDeps: [
-    '@gemeentenijmegen/projen-project-type',
-    'dotenv',
-  ],
+  deps: ['@gemeentenijmegen/utils', '@gemeentenijmegen/aws-constructs'],
+  devDeps: ['@gemeentenijmegen/projen-project-type', 'dotenv'],
   name: 'verzoekservice-werk-en-inkomen',
   projenrcTs: true,
   gitignore: [
