@@ -11,6 +11,7 @@ export interface PipelineStackProps extends StackProps, Configurable {}
  * The pipeline runs in a build environment, and is responsible for deploying
  * Cloudformation stacks to the workload account. The pipeline will first build
  * and synth the project, then deploy (self-mutating if necessary).
+ * First time deploy for each branch to build account with npx projen synth and npx projen deploy --parameters connectionArn=<ARN>
  */
 export class PipelineStack extends Stack {
   branchName: string;
