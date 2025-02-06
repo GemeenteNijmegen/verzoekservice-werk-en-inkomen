@@ -8,12 +8,13 @@ const project = new GemeenteNijmegenCdkApp({
   //     labels: ['auto-merge'],
   //   },
   // },
-  deps: ['@gemeentenijmegen/utils', '@gemeentenijmegen/aws-constructs'],
+  deps: ['@gemeentenijmegen/utils', '@gemeentenijmegen/aws-constructs', 'axios'],
   devDeps: ['@gemeentenijmegen/projen-project-type', 'dotenv'],
   name: 'verzoekservice-werk-en-inkomen',
   projenrcTs: true,
   gitignore: [
     '**/output', // will ignore all output folders and everything in them
+    '**/cert',
   ],
   jestOptions: {
     jestConfig: {
