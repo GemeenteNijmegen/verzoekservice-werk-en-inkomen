@@ -7,24 +7,29 @@ describeIntegration('Live schema retrieve', () => {
   const baseUrl = process.env.VWI_BASEURL_ACC!;
   const apiKey = process.env.API_KEY_ACC!;
   console.log(`Making request to ${baseUrl}`);
+  let clientCert = '';
+  let clientKey = '';
+  let caCert = '';
+  let client = {} as any as BaseGraphQLClient;
+  beforeAll(() => {
+    // Define the paths to your certificate files
+    const certPath = path.resolve(__dirname, './cert/clientCert.crt');
+    const keyPath = path.resolve(__dirname, './cert/privateKey.key');
+    const caPath = path.resolve(__dirname, './cert/publicCA.crt');
 
-  // Define the paths to your certificate files
-  const certPath = path.resolve(__dirname, './cert/clientCert.crt');
-  const keyPath = path.resolve(__dirname, './cert/privateKey.key');
-  const caPath = path.resolve(__dirname, './cert/publicCA.crt');
+    // Read the certificate files
+    clientCert = fs.readFileSync(certPath, 'utf8');
+    clientKey = fs.readFileSync(keyPath, 'utf8');
+    caCert = fs.readFileSync(caPath, 'utf8');
 
-  // Read the certificate files
-  const clientCert = fs.readFileSync(certPath, 'utf8');
-  const clientKey = fs.readFileSync(keyPath, 'utf8');
-  const caCert = fs.readFileSync(caPath, 'utf8');
-
-  // Initialize the GraphQL client
-  const client = new BaseGraphQLClient({
-    baseUrl: baseUrl,
-    apiKey: apiKey,
-    certClientCrt: clientCert,
-    certKey: clientKey,
-    certPublicCA: caCert,
+    // Initialize the GraphQL client
+    client = new BaseGraphQLClient({
+      baseUrl: baseUrl,
+      apiKey: apiKey,
+      certClientCrt: clientCert,
+      certKey: clientKey,
+      certPublicCA: caCert,
+    });
   });
 
   test('schema query', async () => {
