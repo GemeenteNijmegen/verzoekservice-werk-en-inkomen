@@ -4,6 +4,7 @@ import { BaseGraphQLClient, GraphQLResponse } from '../BaseGraphQLClient';
 
 describe('BaseGraphQLClient', () => {
   const mockBaseUrl = 'https://mock-api.com/graphql';
+  const mockApiKey = '1223324';
   const mockCert = 'mock-cert';
   const mockKey = 'mock-key';
   const mockCA = 'mock-ca';
@@ -19,6 +20,7 @@ describe('BaseGraphQLClient', () => {
     // Initialize client with valid certificates
     client = new BaseGraphQLClient({
       baseUrl: mockBaseUrl,
+      apiKey: mockApiKey,
       certClientCrt: mockCert,
       certKey: mockKey,
       certPublicCA: mockCA,
@@ -38,6 +40,7 @@ describe('BaseGraphQLClient', () => {
       () =>
         new BaseGraphQLClient({
           baseUrl: mockBaseUrl,
+          apiKey: mockApiKey,
         }),
     ).toThrow('Missing required mTLS certificates');
 

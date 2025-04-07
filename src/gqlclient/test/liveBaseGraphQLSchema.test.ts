@@ -5,6 +5,7 @@ import { BaseGraphQLClient } from '../BaseGraphQLClient';
 
 describeIntegration('Live schema retrieve', () => {
   const baseUrl = process.env.VWI_BASEURL_ACC!;
+  const apiKey = process.env.API_KEY_ACC!;
   console.log(`Making request to ${baseUrl}`);
 
   // Define the paths to your certificate files
@@ -20,6 +21,7 @@ describeIntegration('Live schema retrieve', () => {
   // Initialize the GraphQL client
   const client = new BaseGraphQLClient({
     baseUrl: baseUrl,
+    apiKey: apiKey,
     certClientCrt: clientCert,
     certKey: clientKey,
     certPublicCA: caCert,

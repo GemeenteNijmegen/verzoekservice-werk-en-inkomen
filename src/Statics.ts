@@ -38,4 +38,8 @@ export class Statics {
    * API endpoint ESB VWI
    */
   static readonly ssmApiEndpointVwi: string = `/${this.projectName}/api-endpoint-vwi`;
+  /**
+   * API key secret
+   */
+  static readonly secretApiKeyVwi: string = `/${this.projectName}/api-key-vwi`;
 }

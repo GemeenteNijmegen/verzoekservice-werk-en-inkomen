@@ -19,6 +19,7 @@ export interface BaseGraphQLClientOptions {
     * @example https://environment.nijmegen.nl/path/nijmegen/pathtwo/vwi/
     */
   baseUrl: string;
+  apiKey: string;
   certClientCrt?: string;
   certKey?: string;
   certPublicCA?: string;
@@ -27,15 +28,19 @@ export interface BaseGraphQLClientOptions {
 export class BaseGraphQLClient {
   readonly axiosInstance: AxiosInstance;
   private readonly baseUrl: string;
+  private readonly apiKey: string;
   private readonly certClientCrt?: string;
   private readonly certKey?: string;
   private readonly certPublicCA?: string;
 
+
   constructor(options: BaseGraphQLClientOptions) {
     this.baseUrl = options.baseUrl;
+    this.apiKey = options.apiKey;
     this.certClientCrt = options.certClientCrt;
     this.certKey = options.certKey;
     this.certPublicCA = options.certPublicCA;
+
 
     logger.info('Initializing GraphQL client', { baseUrl: this.baseUrl });
 
@@ -66,6 +71,7 @@ export class BaseGraphQLClient {
       }),
       headers: {
         'Content-Type': 'application/json',
+        'subscription-key': this.apiKey,
       },
     });
   }
