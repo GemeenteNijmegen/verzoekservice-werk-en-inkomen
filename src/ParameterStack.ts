@@ -23,7 +23,7 @@ export class ParameterStack extends Stack {
     });
     new StringParameter(this, 'ssm-param--3', {
       parameterName: Statics.ssmApiEndpointVwi,
-      description: 'Eindpoint vwi esb api',
+      description: 'Endpoint vwi esb api',
       stringValue: '-',
     });
     new Secret(this, 'secret-1', {
