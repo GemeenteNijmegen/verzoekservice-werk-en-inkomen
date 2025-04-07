@@ -11,9 +11,11 @@ const project = new GemeenteNijmegenCdkApp({
   deps: [
     '@gemeentenijmegen/utils',
     '@gemeentenijmegen/aws-constructs',
+    '@gemeentenijmegen/apigateway-http',
     'axios',
     '@aws-lambda-powertools/tracer',
     '@aws-lambda-powertools/logger',
+    '@types/aws-lambda',
   ],
   devDeps: [
     '@gemeentenijmegen/projen-project-type',

@@ -1258,6 +1258,13 @@
     "@eslint/core" "^0.13.0"
     levn "^0.4.1"
 
+"@gemeentenijmegen/apigateway-http@^0.0.24":
+  version "0.0.24"
+  resolved "https://registry.yarnpkg.com/@gemeentenijmegen/apigateway-http/-/apigateway-http-0.0.24.tgz#a96ed90d5be21bd1a6379e31e4793d7349117209"
+  integrity sha512-1RzcIPiXwXIdS047SRYHEVfRUd/DhHnPXQBZnz6oJOrr1cgmZpcPgvtQ/YZUqCqufxoO6vpY2/yGXjVYBM299g==
+  dependencies:
+    "@types/aws-lambda" "^8.10.148"
+
 "@gemeentenijmegen/aws-constructs@^0.0.32":
   version "0.0.32"
   resolved "https://registry.yarnpkg.com/@gemeentenijmegen/aws-constructs/-/aws-constructs-0.0.32.tgz#292b990026de1985b3984ef00eaac8c15a0807d7"
@@ -2193,6 +2200,11 @@
   integrity sha512-6+7nlbMVX/PVDCwaIQ8nTOPveOcFLSt8GcXdx8hD0bt39uWxYT88uXzqTd4fTvqta7oeUJqudepapKNt2DYJFw==
   dependencies:
     tslib "^2.4.0"
+
+"@types/aws-lambda@^8.10.148":
+  version "8.10.148"
+  resolved "https://registry.yarnpkg.com/@types/aws-lambda/-/aws-lambda-8.10.148.tgz#3a31fc720670473c4d7de4b03d074e8bd97e36a3"
+  integrity sha512-JL+2cfkY9ODQeE06hOxSFNkafjNk4JRBgY837kpoq1GHDttq2U3BA9IzKOWxS4DLjKoymGB4i9uBrlCkjUl1yg==
 
 "@types/babel__core@^7.1.14":
   version "7.20.5"

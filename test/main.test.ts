@@ -1,3 +1,4 @@
+import { Criticality } from '@gemeentenijmegen/aws-constructs';
 import { App } from 'aws-cdk-lib';
 import { Template } from 'aws-cdk-lib/assertions';
 import * as Dotenv from 'dotenv';
@@ -13,6 +14,7 @@ const config: Configuration = {
   branch: 'test',
   buildEnvironment: mockEnv,
   deploymentEnvironment: mockEnv,
+  criticality: new Criticality('low'),
 };
 
 beforeAll(() => {

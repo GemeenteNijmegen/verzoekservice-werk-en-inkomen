@@ -42,4 +42,5 @@ export class Statics {
    * API key secret
    */
   static readonly secretApiKeyVwi: string = `/${this.projectName}/api-key-vwi`;
+
 }
