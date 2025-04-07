@@ -8,8 +8,18 @@ const project = new GemeenteNijmegenCdkApp({
   //     labels: ['auto-merge'],
   //   },
   // },
-  deps: ['@gemeentenijmegen/utils', '@gemeentenijmegen/aws-constructs', 'axios'],
-  devDeps: ['@gemeentenijmegen/projen-project-type', 'dotenv'],
+  deps: [
+    '@gemeentenijmegen/utils',
+    '@gemeentenijmegen/aws-constructs',
+    'axios',
+    '@aws-lambda-powertools/tracer',
+    '@aws-lambda-powertools/logger',
+  ],
+  devDeps: [
+    '@gemeentenijmegen/projen-project-type',
+    'dotenv',
+    'axios-mock-adapter',
+  ],
   name: 'verzoekservice-werk-en-inkomen',
   projenrcTs: true,
   gitignore: [
