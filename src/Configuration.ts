@@ -1,3 +1,4 @@
+import { Criticality } from '@gemeentenijmegen/aws-constructs';
 import { Statics } from './Statics';
 
 /**
@@ -39,6 +40,11 @@ export interface Configuration {
    * the workload AWS account in our default region.
    */
   deploymentEnvironment: Environment;
+  /**
+   * Logging criticality
+   */
+  criticality: Criticality;
+
 }
 
 
@@ -47,11 +53,13 @@ const EnvironmentConfigurations: {[key:string]: Configuration} = {
     branch: 'acceptance',
     buildEnvironment: Statics.gnBuildEnvironment,
     deploymentEnvironment: Statics.gnVerzoekserviceWerkEnInkomenAccpEnvironment,
+    criticality: new Criticality('medium'),
   },
   main: {
     branch: 'main',
     buildEnvironment: Statics.gnBuildEnvironment,
     deploymentEnvironment: Statics.gnVerzoekserviceWerkEnInkomenProdEnvironment,
+    criticality: new Criticality('high'),
   },
 };
 
