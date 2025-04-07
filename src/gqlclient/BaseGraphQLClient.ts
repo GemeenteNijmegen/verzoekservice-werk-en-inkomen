@@ -52,7 +52,7 @@ export class BaseGraphQLClient {
    * Throws an error if required certs are missing.
    */
   private setupAxiosInstance(): AxiosInstance {
-    if (!this.certClientCrt || !this.certKey) {
+    if (!this.certClientCrt || !this.certKey || !this.certClientCrt || !this.apiKey || !this.baseUrl) {
       logger.error('Missing required mTLS certificates');
       throw new Error(
         'Missing required mTLS certificates. Ensure both "certClientCrt" (client certificate) and "certKey" (private key) are provided.',

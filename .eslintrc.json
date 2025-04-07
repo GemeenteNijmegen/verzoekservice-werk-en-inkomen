@@ -149,6 +149,7 @@
         "devDependencies": [
           "**/test/**",
           "**/build-tools/**",
+          "src/retrieve-iit/retrieve-iit.lambda.ts",
           ".projenrc.ts",
           "projenrc/**/*.ts"
         ],
