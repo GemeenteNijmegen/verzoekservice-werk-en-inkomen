@@ -33,7 +33,7 @@
     "@gemeentenijmegen/projen-project-type": "^1.10.3",
     "@stylistic/eslint-plugin": "^2",
     "@types/jest": "^29.5.14",
-    "@types/node": "^22.14.1",
+    "@types/node": "^22.15.0",
     "@typescript-eslint/eslint-plugin": "^8",
     "@typescript-eslint/parser": "^8",
     "aws-cdk": "^2",
@@ -52,14 +52,14 @@
     "typescript": "^5.8.3"
   },
   "dependencies": {
-    "@aws-lambda-powertools/logger": "^2.18.0",
-    "@aws-lambda-powertools/tracer": "^2.18.0",
+    "@aws-lambda-powertools/logger": "^2.19.0",
+    "@aws-lambda-powertools/tracer": "^2.19.0",
     "@gemeentenijmegen/apigateway-http": "^0.0.24",
     "@gemeentenijmegen/aws-constructs": "^0.0.34",
     "@gemeentenijmegen/utils": "^0.0.30",
     "@types/aws-lambda": "^8.10.149",
     "aws-cdk-lib": "^2.1.0",
-    "axios": "^1.8.4",
+    "axios": "^1.9.0",
     "constructs": "^10.0.5"
   },
   "license": "EUPL-1.2",
