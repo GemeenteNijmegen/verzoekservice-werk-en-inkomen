@@ -55,8 +55,8 @@ export async function handler(
   }`;
 
   const response = await client.request(query);
-  logger.debug(event);
-  logger.debug(response.data);
+  logger.debug(event as any);
+  logger.debug(response.data as any);
   return {};
 }
 

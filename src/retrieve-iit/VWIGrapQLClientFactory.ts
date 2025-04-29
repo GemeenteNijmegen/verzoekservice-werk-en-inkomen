@@ -51,8 +51,8 @@ export class VWIGrapQLClientFactory {
         await Promise.all([
           AWS.getParameter(this.options.vwiBaseUrl),
           AWS.getSecret(this.options.apiKeySecretArn),
-          AWS.getSecret(this.options.mtlsPrivateKeySecretArn),
           AWS.getParameter(this.options.mtlsClientCertParamName),
+          AWS.getSecret(this.options.mtlsPrivateKeySecretArn),
           AWS.getParameter(this.options.mtlsPublicCAParamName),
         ]);
       this.baseUrl = baseUrl;
