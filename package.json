@@ -40,7 +40,7 @@
     "axios-mock-adapter": "^2.1.0",
     "commit-and-tag-version": "^12",
     "dotenv": "^16.6.1",
-    "esbuild": "^0.25.8",
+    "esbuild": "^0.25.9",
     "eslint": "^9",
     "eslint-import-resolver-typescript": "^3.10.1",
     "eslint-plugin-import": "^2.32.0",
@@ -52,8 +52,8 @@
     "typescript": "^5.9.2"
   },
   "dependencies": {
-    "@aws-lambda-powertools/logger": "^2.24.1",
-    "@aws-lambda-powertools/tracer": "^2.24.1",
+    "@aws-lambda-powertools/logger": "^2.25.0",
+    "@aws-lambda-powertools/tracer": "^2.25.0",
     "@gemeentenijmegen/apigateway-http": "^0.0.29",
     "@gemeentenijmegen/aws-constructs": "^0.0.41",
     "@gemeentenijmegen/utils": "^0.0.35",
