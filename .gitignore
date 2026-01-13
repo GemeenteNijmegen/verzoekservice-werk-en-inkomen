@@ -63,4 +63,5 @@ junit.xml
 !/src/retrieve-iit/retrieve-iit-function.ts
 !/.github/workflows/emergency.yml
 !/.github/workflows/auto-merge.yml
+!/.nvmrc
 !/.projenrc.ts
