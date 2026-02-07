@@ -54,8 +54,8 @@
   "dependencies": {
     "@aws-lambda-powertools/logger": "^2.30.2",
     "@aws-lambda-powertools/tracer": "^2.30.2",
-    "@gemeentenijmegen/apigateway-http": "^0.0.35",
-    "@gemeentenijmegen/aws-constructs": "^0.0.47",
+    "@gemeentenijmegen/apigateway-http": "^0.0.36",
+    "@gemeentenijmegen/aws-constructs": "^0.0.48",
     "@gemeentenijmegen/utils": "^0.0.38",
     "@types/aws-lambda": "^8.10.160",
     "aws-cdk-lib": "^2.1.0",
